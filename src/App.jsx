@@ -15,6 +15,9 @@ import RefCounter from './components/rendering/RefCounter';
 import ClickButton from './components/rendering/ClickButton';
 import withClickTracker from './components/rendering/hoc/withClickTracker';
 import Button from './components/basiccomponent/Button';
+import HookCounter from './components/hook/HookCounter';
+import UserProfile from './components/hook/UserProfile';
+import ComplexState from './components/hook/ComplexState';
 const App = () => {
 
   const userIsLoggedIn = true; // ตัวอย่างการกำหนดสถานะผู้ใช้
@@ -44,7 +47,10 @@ const App = () => {
       {/* <CallbackRefExample/> */}
       {/* <RefCounter/> */}
       {/* <ClickButton/> */}
-      <TrackedButton label="Click me!" />
+      {/* <TrackedButton label="Click me!" /> */}
+      {/* <HookCounter/> */}
+      {/* <UserProfile/> */}
+      <ComplexState/>
     </div>
   );
 };
