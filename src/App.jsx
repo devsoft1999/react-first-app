@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 
 import WelcomeMessage from './components/basiccomponent/WelcomeMessage'; // นำเข้า Component
 import './App.css'
@@ -18,6 +19,10 @@ import Button from './components/basiccomponent/Button';
 import HookCounter from './components/hook/HookCounter';
 import UserProfile from './components/hook/UserProfile';
 import ComplexState from './components/hook/ComplexState';
+import HelloWorld from './components/hook/HelloWorld';
+import Timer from './components/hook/Timer';
+import UserComponent from './components/hook/UserComponent';
+
 const App = () => {
 
   const userIsLoggedIn = true; // ตัวอย่างการกำหนดสถานะผู้ใช้
@@ -26,7 +31,11 @@ const App = () => {
 
   const TrackedButton = withClickTracker (Button);
 
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    console.log('Component re-rendered!');
+  }); // ไม่มี dependency array, จะทำงานทุกครั้งที่ render
 
   return (
     <div>
@@ -50,7 +59,12 @@ const App = () => {
       {/* <TrackedButton label="Click me!" /> */}
       {/* <HookCounter/> */}
       {/* <UserProfile/> */}
-      <ComplexState/>
+      {/* <ComplexState/> */}
+      {/* <HelloWorld/> */}
+      {/* <Timer/> */}
+      {/* <h1>{count}</h1> */}
+      {/* <button onClick={() => setCount(count + 1)}>Increase</button> */}
+      <UserComponent/>
     </div>
   );
 };
