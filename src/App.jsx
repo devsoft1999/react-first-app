@@ -22,7 +22,10 @@ import ComplexState from './components/hook/ComplexState';
 import HelloWorld from './components/hook/HelloWorld';
 import Timer from './components/hook/Timer';
 import UserComponent from './components/hook/UserComponent';
-
+import UseRefCounter from './components/hook/UseRefCounter';
+import FieldTextInputFocus from './components/hook/FieldTextInputFocus';
+import UseReducerCounter from './components/hook/UseReducerCounter';
+import Form from './components/hook/Form';
 const App = () => {
 
   const userIsLoggedIn = true; // ตัวอย่างการกำหนดสถานะผู้ใช้
@@ -64,7 +67,11 @@ const App = () => {
       {/* <Timer/> */}
       {/* <h1>{count}</h1> */}
       {/* <button onClick={() => setCount(count + 1)}>Increase</button> */}
-      <UserComponent/>
+      {/* <UserComponent/> */}
+      {/* <UseRefCounter/> */}
+      {/* <FieldTextInputFocus/> */}
+      {/* <UseReducerCounter/> */}
+      {/* <Form/> */}
     </div>
   );
 };
