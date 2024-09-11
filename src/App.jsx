@@ -38,6 +38,9 @@ import UserDetail from './components/routing/UserDetail';
 import FetchData from './components/axios/FetchData';
 import PostData from './components/axios/PostData';
 import UploadFile from './components/axios/UploadFile';
+import Users from './components/reactquery/Users';
+import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query';
+ const queryClient = new QueryClient();
 const App = () => {
 
   const userIsLoggedIn = true; // ตัวอย่างการกำหนดสถานะผู้ใช้
@@ -51,7 +54,7 @@ const App = () => {
   useEffect(() => {
     console.log('Component re-rendered!');
   }); // ไม่มี dependency array, จะทำงานทุกครั้งที่ render
-
+  const queryClient = new QueryClient();
   return (
     <div>
       {/* <WelcomeMessage name={name} /> ส่งค่า prop name ไปที่ WelcomeMessage */}
@@ -115,7 +118,8 @@ const App = () => {
       </Router> */}
       {/* <FetchData/> */}
       {/* <PostData/> */}
-      <UploadFile/>
+      {/* <UploadFile/> */}
+      <Users/>
     </div>
   );
 };

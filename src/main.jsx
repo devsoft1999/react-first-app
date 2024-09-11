@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+const queryClient = new QueryClient();
+
+// สร้าง root โดยส่ง container เพียงครั้งเดียว
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+  <QueryClientProvider client={queryClient}>
     <App />
-  </StrictMode>,
-)
+  </QueryClientProvider>
+);
