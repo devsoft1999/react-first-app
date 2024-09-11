@@ -26,6 +26,18 @@ import UseRefCounter from './components/hook/UseRefCounter';
 import FieldTextInputFocus from './components/hook/FieldTextInputFocus';
 import UseReducerCounter from './components/hook/UseReducerCounter';
 import Form from './components/hook/Form';
+import Home from './components/routing/Home';
+import About from './components/routing/About';
+import Contact from './components/routing/Contact';
+import Dashboard from './components/routing/Dashboard';
+import DashboardOverview from './components/routing/DashboardOverview';
+import DashboardStats from './components/routing/DashboardStats';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import FormComponent from './components/routing/FormComponent';
+import UserDetail from './components/routing/UserDetail';
+import FetchData from './components/axios/FetchData';
+import PostData from './components/axios/PostData';
+import UploadFile from './components/axios/UploadFile';
 const App = () => {
 
   const userIsLoggedIn = true; // ตัวอย่างการกำหนดสถานะผู้ใช้
@@ -72,6 +84,38 @@ const App = () => {
       {/* <FieldTextInputFocus/> */}
       {/* <UseReducerCounter/> */}
       {/* <Form/> */}
+
+      {/* <Router>
+        {/* <FormComponent /> */}
+
+        {/* </Router> } */}
+        {/* <Router>
+          <Routes>
+            <Route path="/users/:id" element={<UserDetail />} />
+          </Routes>
+        </Router> */}
+        {/*
+        
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="overview" element={<DashboardOverview />} />
+            <Route path="stats" element={<DashboardStats />} />
+          </Route>
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router> */}
+      {/* <FetchData/> */}
+      {/* <PostData/> */}
+      <UploadFile/>
     </div>
   );
 };
